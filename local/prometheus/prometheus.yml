@@ -42,3 +42,8 @@ scrape_configs:
          # scheme defaults to 'http'.
     static_configs:
       - targets: ['SERVER_PUBLIC_IP_ADDRESS:9323']
+      
+  - job_name: collectd
+    static_configs:
+      - targets:
+        - ['SERVER_PUBLIC_IP_ADDRESS:9103']
