@@ -16,7 +16,7 @@ services:
       org.label-schema.group: "monitoring"
   grafana:
     user: root
-    image: grafana/grafana
+    image: grafana/grafana:5.2.4
     container_name: "grafana"
     ports:
       - "3000:3000"
