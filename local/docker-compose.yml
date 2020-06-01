@@ -57,23 +57,23 @@ services:
     labels:
       org.label-schema.group: "monitoring"
       
-  collectd:
-    image: prom/collectd-exporter
-    container_name: collectdexporter
-    ports:
-      - 9103:9103
-    restart: always
-    user: root
-    privileged: true
-    volumes:
-      - /proc:/host/proc:ro
-      - /sys:/host/sys:ro
-      - /:/rootfs:ro
-      - ./collectd:/etc/collectd
-    networks:
-      - monitor-net
-    labels:
-      org.label-schema.group: "monitoring"
+  #collectd:
+  #  image: prom/collectd-exporter
+  #  container_name: collectdexporter
+  #  ports:
+  #    - 9103:9103
+  #  restart: always
+  #  user: root
+  #  privileged: true
+  #  volumes:
+  #    - /proc:/host/proc:ro
+  #    - /sys:/host/sys:ro
+  #    - /:/rootfs:ro
+  #    - ./collectd:/etc/collectd
+  #  networks:
+  #    - monitor-net
+  #  labels:
+  #    org.label-schema.group: "monitoring"
     
   cadvisor:
     image: google/cadvisor
